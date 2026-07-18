@@ -30,20 +30,21 @@ function toggleUser(){
 }
 
 function randomUser(){
-    fetch('https://randomuser.me/api/')
+    fetch('https://randomuser.me/api')
     .then(function(response){
         return response.json();
     })
     .then(function(data){
-        var userdata =data.results[0];
+        console.log(data)
+        var userdata = data.results[0];
         var userImage = document.getElementById("img");
-        userImage.src = usersdata.picture.large
+        userImage.src = userdata.picture.large
 
         var userName = document.getElementById("user-name");
-        userName.innerHTML = usersdata.name.first + " " + userdata.name.last;
+        userName.innerHTML = userdata.name.first + " " + userdata.name.last;
     
         var userGender = document.getElementById("user-gender");
-        userGender.innerHTML = usersdata.gender;
+        userGender.innerHTML = userdata.gender;
     })
     .catch(function(err){
         console.log(error);
