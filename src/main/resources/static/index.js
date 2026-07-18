@@ -1,2 +1,2 @@
-alert("VERY GOOD WELOME!");
-//console.log("hell from js")
+// alert("VERY GOOD WELOME!");
+// console.log("hell from js")
